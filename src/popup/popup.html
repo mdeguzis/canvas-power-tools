@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canvas Power Tools</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <img src="../icons/icon48.png" alt="" width="24" height="24" />
+    <h1>Canvas Power Tools</h1>
+  </header>
+
+  <section class="card">
+    <h2>Notifications</h2>
+    <label class="toggle-row">
+      <span>Enable standing notifications</span>
+      <input type="checkbox" id="notificationsEnabled" />
+    </label>
+    <label class="field-row">
+      <span>Poll interval (minutes)</span>
+      <input type="number" id="pollInterval" min="1" max="60" value="1" />
+    </label>
+  </section>
+
+  <section class="card">
+    <h2>Canvas Domain</h2>
+    <p class="hint">Leave blank to match all Canvas sites, or enter your school's specific domain.</p>
+    <label class="field-row">
+      <span>Domain (optional)</span>
+      <input type="text" id="customDomain" placeholder="canvas.myschool.edu" />
+    </label>
+  </section>
+
+  <div class="actions">
+    <button id="save">Save Settings</button>
+    <span id="saved-msg" class="saved-msg">Saved!</span>
+  </div>
+
+  <footer>v<span id="version"></span></footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
