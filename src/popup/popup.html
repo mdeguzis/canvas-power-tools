@@ -25,6 +25,39 @@
   </section>
 
   <section class="card">
+    <h2>Module Tracker</h2>
+    <label class="toggle-row">
+      <span>Toast notification on new modules</span>
+      <input type="checkbox" id="toastNotificationsEnabled" />
+    </label>
+    <label class="field-row">
+      <span>Pill color</span>
+      <input type="color" id="pillColor" value="#b45309" />
+    </label>
+    <div class="action-row" style="margin-top:6px;flex-wrap:wrap;gap:6px;">
+      <button id="markModulesRead" class="secondary-btn">Mark all as read</button>
+      <button id="markModulesUnread" class="secondary-btn secondary-btn-danger">Mark all as unread</button>
+      <span id="modules-cleared-msg" class="saved-msg">Done!</span>
+    </div>
+
+    <div class="details-toggle" id="detailsToggle">
+      <span>Module details</span>
+      <span id="detailsChevron">&#9654;</span>
+    </div>
+
+    <div id="moduleDetails" class="module-details hidden">
+      <div class="details-filter">
+        <button class="filter-btn active" data-filter="unread">Unread</button>
+        <button class="filter-btn" data-filter="read">Read</button>
+        <button class="filter-btn" data-filter="all">All</button>
+      </div>
+      <div id="moduleDetailsList" class="module-details-list">
+        <div class="details-loading">Loading...</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
     <h2>Canvas Domain</h2>
     <p class="hint">Leave blank to match all Canvas sites, or enter your school's specific domain.</p>
     <label class="field-row">
@@ -37,6 +70,14 @@
     <button id="save">Save Settings</button>
     <span id="saved-msg" class="saved-msg">Saved!</span>
   </div>
+
+  <section class="card card-debug">
+    <h2>Developer</h2>
+    <label class="toggle-row">
+      <span>Debug console logging</span>
+      <input type="checkbox" id="debugLogging" />
+    </label>
+  </section>
 
   <footer>v<span id="version"></span></footer>
 

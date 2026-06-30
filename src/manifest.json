@@ -5,11 +5,12 @@
   "description": "Supercharge Canvas LMS with persistent notifications, settings, and more.",
   "permissions": [
     "storage",
-    "alarms"
+    "alarms",
+    "tabs",
+    "contextMenus"
   ],
   "host_permissions": [
-    "https://*.instructure.com/*",
-    "https://canvas.*.edu/*"
+    "https://*.instructure.com/*"
   ],
   "background": {
     "service_worker": "background.js",
@@ -18,8 +19,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://*.instructure.com/*",
-        "https://canvas.*.edu/*"
+        "https://*.instructure.com/*"
       ],
       "js": ["content.js"],
       "run_at": "document_end"
